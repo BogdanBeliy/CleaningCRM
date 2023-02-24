@@ -12,3 +12,9 @@ class Lead(models.Model):
     customer = models.ForeignKey('core.Customer', on_delete=models.DO_NOTHING, related_name='leads')
     completion_date = models.DateField(null=True)
     address = models.CharField(max_length=2000)
+    source = models.ForeignKey('core.Source', on_delete=models.DO_NOTHING, related_name='leads',
+                               null=True)  # TODO убрать null
+
+
+
+
