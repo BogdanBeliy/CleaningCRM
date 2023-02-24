@@ -1,7 +1,7 @@
 # DRF configs
 
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSIONS_CLASSES':
-#         []
-# }
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}

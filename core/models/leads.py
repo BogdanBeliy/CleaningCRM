@@ -1,10 +1,11 @@
 from django.contrib.auth.models import User
+from core.models.__base import BaseModel
 from django.db import models
 
 from core.constants import LeadStatus
 
 
-class Lead(models.Model):
+class Lead(BaseModel):
     title = models.CharField(max_length=255)
     reason = models.CharField(max_length=2000)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='leads', null=True)

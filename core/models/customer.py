@@ -1,7 +1,8 @@
+from core.models.__base import BaseModel
 from django.db import models
 
 
-class Customer(models.Model):
+class Customer(BaseModel):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255, null=True)
