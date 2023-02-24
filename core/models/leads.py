@@ -14,6 +14,8 @@ class Lead(models.Model):
     address = models.CharField(max_length=2000)
     source = models.ForeignKey('core.Source', on_delete=models.DO_NOTHING, related_name='leads',
                                null=True)  # TODO убрать null
+    work_type = models.CharField(max_length=255)
+
 
 
 
